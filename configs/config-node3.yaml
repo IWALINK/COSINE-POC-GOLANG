@@ -1,0 +1,30 @@
+peerRegistry:
+  path: "data/peer_registry.json"
+
+p2p:
+  port: 9003
+  maxPeers: 50
+  pingInterval: "30s"
+  discoveryInterval: "1m"
+  bootstrapNodes: [] # Will be populated from registry
+
+node:
+  id: "node-3"
+  environment: "development"
+  datadir: "data/node3"
+
+logging:
+  level: "debug"
+  outputs:
+    - "stdout"
+    - "logs/cosine-node3.log"
+  encoding: "console"
+
+metrics:
+  enabled: true
+  address: ":9093"
+  path: "/metrics"
+
+api:
+  enabled: true
+  port: 8083

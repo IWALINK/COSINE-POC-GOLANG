@@ -1,0 +1,90 @@
+p2p:
+  port: 9000
+  maxPeers: 50
+  pingInterval: "30s"
+  discoveryInterval: "1m"
+  bootstrapNodes:
+    - "/ip4/127.0.0.1/tcp/9001/p2p/12D3KooWEsu7yHayfgYLqrToJZJVLiKcURHPuBxXXJQ2RNwxrZi9"
+    - "/ip4/127.0.0.1/tcp/9002/p2p/12D3KooWJV2hbftQEcA9ic3zi5v3bhsQAUiCTxACLfGt98KfqMkC"
+
+node:
+  id: "test-node-1"
+  environment: "development"
+  datadir: "data"
+
+logging:
+  level: "debug" # Changed from "info" to "debug" for more verbose output
+  outputs:
+    - "stdout"
+    - "logs/cosine.log"
+  encoding: "console"
+  rotate:
+    maxSize: 100
+    maxBackups: 5
+    maxAge: 30
+    compress: true
+
+metrics:
+  enabled: true
+  address: ":9090"
+  path: "/metrics"
+
+api:
+  enabled: true
+  port: 8080
+  cors:
+    enabled: true
+    allowedOrigins:
+      - "*"
+
+consensus:
+  alpha: 0.5
+  beta: 0.2
+  gamma: 0.1
+  maxValidators: 100
+
+creditscore:
+  kalman:
+    tau_initial: 2.5
+    k_initial: 3.0
+    p_initial: 1.0
+    q_tau: 0.01
+    q_k: 0.01
+    r_tau: 1.0
+    r_k: 1.0
+  scaling:
+    k_neg_initial: 1.0
+    k_pos_initial: 1.0
+    k_assoc_initial: 1.0
+    k_rehab_initial: 1.0
+    q: 0.01
+    r: 1.0
+
+fraud:
+  timeWindow:
+    min: "30d"
+    max: "730d"
+  hopLimit:
+    min: 1
+    max: 15
+  association:
+    beta: 0.5
+    delta: 0.01
+
+voting:
+  newWalletReputation: 0.1
+  alpha: 0.05
+  beta: 0.1
+  lambda: 2.5
+
+storage:
+  ipfs:
+    enabled: true
+    gateway: "https://ipfs.io/ipfs/"
+    api: "/ip4/127.0.0.1/tcp/5001"
+
+fees:
+  verification:
+    kappa: 1.2
+  token:
+    baseFee: 0.002

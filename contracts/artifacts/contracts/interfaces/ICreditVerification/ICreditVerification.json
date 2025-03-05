@@ -1,0 +1,165 @@
+{
+  "contractName": "ICreditVerification",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "int256",
+              "name": "x",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "y",
+              "type": "int256"
+            }
+          ],
+          "internalType": "struct ICreditVerification.Vector2D",
+          "name": "v1",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "int256",
+              "name": "x",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "y",
+              "type": "int256"
+            }
+          ],
+          "internalType": "struct ICreditVerification.Vector2D",
+          "name": "v2",
+          "type": "tuple"
+        }
+      ],
+      "name": "calculateCosineSimilarity",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "similarity",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        }
+      ],
+      "name": "calculateVerificationFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "verifier",
+          "type": "address"
+        }
+      ],
+      "name": "checkFeedbackRequirement",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "requiresFeedback",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bool",
+          "name": "isTrusted",
+          "type": "bool"
+        }
+      ],
+      "name": "provideTransactionFeedback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "int256",
+              "name": "x",
+              "type": "int256"
+            },
+            {
+              "internalType": "int256",
+              "name": "y",
+              "type": "int256"
+            }
+          ],
+          "internalType": "struct ICreditVerification.Vector2D",
+          "name": "thresholdVector",
+          "type": "tuple"
+        },
+        {
+          "internalType": "int256",
+          "name": "thresholdSimilarity",
+          "type": "int256"
+        }
+      ],
+      "name": "verifyCreditScore",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "similarity",
+          "type": "int256"
+        },
+        {
+          "internalType": "bool",
+          "name": "passed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "",
+  "deployedBytecode": "",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"int256\",\"name\":\"x\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"y\",\"type\":\"int256\"}],\"internalType\":\"struct ICreditVerification.Vector2D\",\"name\":\"v1\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"int256\",\"name\":\"x\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"y\",\"type\":\"int256\"}],\"internalType\":\"struct ICreditVerification.Vector2D\",\"name\":\"v2\",\"type\":\"tuple\"}],\"name\":\"calculateCosineSimilarity\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"similarity\",\"type\":\"int256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"}],\"name\":\"calculateVerificationFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifier\",\"type\":\"address\"}],\"name\":\"checkFeedbackRequirement\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"requiresFeedback\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"isTrusted\",\"type\":\"bool\"}],\"name\":\"provideTransactionFeedback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"components\":[{\"internalType\":\"int256\",\"name\":\"x\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"y\",\"type\":\"int256\"}],\"internalType\":\"struct ICreditVerification.Vector2D\",\"name\":\"thresholdVector\",\"type\":\"tuple\"},{\"internalType\":\"int256\",\"name\":\"thresholdSimilarity\",\"type\":\"int256\"}],\"name\":\"verifyCreditScore\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"similarity\",\"type\":\"int256\"},{\"internalType\":\"bool\",\"name\":\"passed\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{},\"userdoc\":{}},\"settings\":{\"compilationTarget\":{\"interfaces\\\\ICreditVerification.sol\":\"ICreditVerification\"},\"evmVersion\":\"london\",\"optimizer\":{\"enabled\":true,\"runs\":200},\"libraries\":{}}}",
+  "methodIdentifiers": {
+    "calculateCosineSimilarity((int256,int256),(int256,int256))": "ec3492da",
+    "calculateVerificationFee(bytes32)": "2164077b",
+    "checkFeedbackRequirement(address)": "f3f9861e",
+    "provideTransactionFeedback(bytes32,bool)": "c17dd765",
+    "verifyCreditScore(bytes32,(int256,int256),int256)": "8da3608b"
+  }
+}

@@ -1,0 +1,40 @@
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+bin/
+build/
+dist/
+*.exe
+
+# Ganache data
+ganache_data/
+
+# Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Coverage output
+*.out
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# OS specific files
+.DS_Store
+Thumbs.db

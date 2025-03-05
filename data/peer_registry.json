@@ -1,0 +1,21 @@
+{
+  "node-1": [
+    "/ip4/127.0.0.1/tcp/9001/p2p/12D3KooWNd8iHCRptuNoE2uUTNR8DP4xV1p2YRhxUrsnqCtKKQ3z",
+    "/ip4/192.168.1.61/tcp/9001/p2p/12D3KooWNd8iHCRptuNoE2uUTNR8DP4xV1p2YRhxUrsnqCtKKQ3z",
+    "/ip4/192.168.1.52/tcp/9001/p2p/12D3KooWNd8iHCRptuNoE2uUTNR8DP4xV1p2YRhxUrsnqCtKKQ3z"
+  ],
+  "node-2": [
+    "/ip4/192.168.1.52/tcp/9002/p2p/12D3KooWQ38voTYjs4FtScqCWRF5CH5JAu6VXFdPz8adiT3StSDM",
+    "/ip4/127.0.0.1/tcp/9002/p2p/12D3KooWQ38voTYjs4FtScqCWRF5CH5JAu6VXFdPz8adiT3StSDM",
+    "/ip4/192.168.1.61/tcp/9002/p2p/12D3KooWQ38voTYjs4FtScqCWRF5CH5JAu6VXFdPz8adiT3StSDM"
+  ],
+  "node-3": [
+    "/ip4/127.0.0.1/tcp/9003/p2p/12D3KooWAGKqyhHYTohGk4nQQK72JRgrnAK8dMiwviP8yrdaN46B",
+    "/ip4/192.168.1.61/tcp/9003/p2p/12D3KooWAGKqyhHYTohGk4nQQK72JRgrnAK8dMiwviP8yrdaN46B",
+    "/ip4/192.168.1.52/tcp/9003/p2p/12D3KooWAGKqyhHYTohGk4nQQK72JRgrnAK8dMiwviP8yrdaN46B"
+  ],
+  "test-node-1": [
+    "/ip4/127.0.0.1/tcp/9000/p2p/12D3KooWSXZndv6YXUVThioKXLBohqVmCQv8CbBBseNcS5wcr77k",
+    "/ip4/192.168.1.61/tcp/9000/p2p/12D3KooWSXZndv6YXUVThioKXLBohqVmCQv8CbBBseNcS5wcr77k"
+  ]
+}

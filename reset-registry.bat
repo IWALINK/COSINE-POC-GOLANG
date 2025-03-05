@@ -1,0 +1,16 @@
+@echo off
+echo Cleaning up peer registry for all nodes...
+
+echo Stopping running nodes (if any)...
+taskkill /f /im cosine-cli.exe 2>nul
+
+echo Cleaning peer registry for Node 1...
+cosine-cli.exe -config configs/config-node1.yaml -clear-registry
+
+echo Cleaning peer registry for Node 2...
+cosine-cli.exe -config configs/config-node2.yaml -clear-registry
+
+echo Cleaning peer registry for Node 3...
+cosine-cli.exe -config configs/config-node3.yaml -clear-registry
+
+echo Registry reset complete. You can now start the nodes again.

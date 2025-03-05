@@ -1,0 +1,53 @@
+# General node configuration
+node:
+  id: "test-node"
+  environment: "development"
+  datadir: "./data"
+
+# Logging configuration
+logging:
+  level: "debug"
+  outputs: ["stdout", "./logs/cosine-test.log"]
+  encoding: "console"
+  rotate:
+    maxSize: 100
+    maxBackups: 3
+    maxAge: 30
+    compress: true
+
+# Metrics configuration
+metrics:
+  enabled: true
+  address: ":9091"
+  path: "/metrics"
+
+# Fraud detection configuration
+fraud:
+  timeWindow:
+    min: 30
+    max: 730
+  hopLimit:
+    min: 1
+    max: 15
+  association:
+    beta: 0.5
+    delta: 0.01
+
+# Credit scoring configuration
+creditscore:
+  scaling:
+    k_neg_initial: 1.0
+    k_pos_initial: 1.0
+    k_assoc_initial: 1.0
+    k_rehab_initial: 1.0
+    q: 0.01
+    r: 1.0
+
+  kalman:
+    tau_initial: 2.5
+    k_initial: 3.0
+    p_initial: 1.0
+    q_tau: 0.01
+    q_k: 0.01
+    r_tau: 1.0
+    r_k: 1.0

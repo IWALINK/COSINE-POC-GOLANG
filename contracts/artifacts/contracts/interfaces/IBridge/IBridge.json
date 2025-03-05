@@ -1,0 +1,117 @@
+{
+  "contractName": "IBridge",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "operationId",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkOperationStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "exists",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "initiator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "confirmations",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isCompleted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "operationId",
+          "type": "uint256"
+        }
+      ],
+      "name": "confirmOperation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l1Address",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sourceChainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "initiateIncomingBridge",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "destinationChainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "initiateOutgoingBridge",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "",
+  "deployedBytecode": "",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"}],\"name\":\"checkOperationStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"exists\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"initiator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"confirmations\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isCompleted\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"}],\"name\":\"confirmOperation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"l1Address\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"sourceChainId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"initiateIncomingBridge\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"destinationChainId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"initiateOutgoingBridge\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{},\"userdoc\":{}},\"settings\":{\"compilationTarget\":{\"interfaces\\\\IBridge.sol\":\"IBridge\"},\"evmVersion\":\"london\",\"optimizer\":{\"enabled\":true,\"runs\":200},\"libraries\":{}}}",
+  "methodIdentifiers": {
+    "checkOperationStatus(uint256)": "8034e356",
+    "confirmOperation(uint256)": "fc4ce362",
+    "initiateIncomingBridge(address,bytes32,uint256,uint256)": "db606d5d",
+    "initiateOutgoingBridge(bytes32,uint256,uint256)": "02892dd8"
+  }
+}

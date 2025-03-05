@@ -1,0 +1,8 @@
+{
+  "contractName": "Math",
+  "abi": [],
+  "bytecode": "60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220e91d0b72d0ff009b3ea09e6b95963bbe902271bfde10f6c03cf48d240255864664736f6c63430008130033",
+  "deployedBytecode": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220e91d0b72d0ff009b3ea09e6b95963bbe902271bfde10f6c03cf48d240255864664736f6c63430008130033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{},\"userdoc\":{}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/math/Math.sol\":\"Math\"},\"evmVersion\":\"london\",\"optimizer\":{\"enabled\":true,\"runs\":200},\"libraries\":{}}}",
+  "methodIdentifiers": {}
+}

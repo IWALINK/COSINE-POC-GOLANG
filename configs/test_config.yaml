@@ -1,0 +1,35 @@
+node:
+  id: "test-node"
+  datadir: "./data"
+  environment: "development"
+
+p2p:
+  port: 9000
+  maxPeers: 50
+  pingInterval: "5m"
+  pingTimeout: "10m"
+
+consensus:
+  alpha: 0.5
+  beta: 0.2
+  gamma: 0.1
+  maxValidators: 10
+  selectionTimeout: "30s"
+  pingThreshold: "5m"
+  minStake: 100000
+  deltaPlus: 0.01
+  deltaMinus: 0.05
+  rewardPerEvent: 10
+  kalman:
+    tau_initial: 2.5
+    k_initial: 3.0
+    p_initial: 1.0
+    q_tau: 0.01
+    q_k: 0.01
+    r_tau: 1.0
+    r_k: 1.0
+
+logging:
+  level: "debug"
+  outputs: ["stdout"]
+  encoding: "console"

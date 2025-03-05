@@ -1,0 +1,8 @@
+{
+  "contractName": "Context",
+  "abi": [],
+  "bytecode": "",
+  "deployedBytecode": "",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{},\"userdoc\":{}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/Context.sol\":\"Context\"},\"evmVersion\":\"london\",\"optimizer\":{\"enabled\":true,\"runs\":200},\"libraries\":{}}}",
+  "methodIdentifiers": {}
+}

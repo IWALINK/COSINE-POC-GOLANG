@@ -1,0 +1,143 @@
+{
+  "contractName": "IWalletLinking",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l1Address",
+          "type": "address"
+        }
+      ],
+      "name": "generateChallenge",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "challengeHash",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLinkedL1Address",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "l1Address",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l1Address",
+          "type": "address"
+        }
+      ],
+      "name": "getLinkedL2Wallet",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "linkWallet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        }
+      ],
+      "name": "revokeLinking",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l1Address",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "l2Wallet",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        }
+      ],
+      "name": "verifyLinking",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isLinked",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "",
+  "deployedBytecode": "",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"l1Address\",\"type\":\"address\"}],\"name\":\"generateChallenge\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"challengeHash\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"}],\"name\":\"getLinkedL1Address\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"l1Address\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"l1Address\",\"type\":\"address\"}],\"name\":\"getLinkedL2Wallet\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"linkWallet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"}],\"name\":\"revokeLinking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"l1Address\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"l2Wallet\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"}],\"name\":\"verifyLinking\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isLinked\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{},\"userdoc\":{}},\"settings\":{\"compilationTarget\":{\"interfaces\\\\IWalletLinking.sol\":\"IWalletLinking\"},\"evmVersion\":\"london\",\"optimizer\":{\"enabled\":true,\"runs\":200},\"libraries\":{}}}",
+  "methodIdentifiers": {
+    "generateChallenge(address)": "c84450f9",
+    "getLinkedL1Address(bytes32,uint256)": "6f6ad327",
+    "getLinkedL2Wallet(address)": "ead5a1b4",
+    "linkWallet(bytes32,uint256,bytes)": "405e6e31",
+    "revokeLinking(uint256)": "1cb3cd1c",
+    "verifyLinking(address,bytes32,uint256)": "07e1ac53"
+  }
+}
